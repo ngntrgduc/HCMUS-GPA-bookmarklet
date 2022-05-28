@@ -1,0 +1,33 @@
+html {
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    padding-left: 60px;
+}
+
+.center {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.script {
+    font-size: 35px;
+    width: 450px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-align: center;
+    color: #00ffff;
+    background-color: #ffe2f8;
+    transition-duration: 0.5s;
+}
+
+.script:hover {
+    font-size: 40px;
+    transition-duration: 0.5s;
+}
