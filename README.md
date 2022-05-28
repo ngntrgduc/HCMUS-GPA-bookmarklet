@@ -7,12 +7,9 @@ Tính GPA trên Portal thông qua bookmarklet
 
 
 ### Cách sử dụng
-- Mở thanh bookmark/favorite bar trên trình duyệt của bạn lên bằng cách nhấn tổ hợp phím `Ctrl + Shift + B`
-- Ấn [vô đây]() để chuyển hướng tới trang web chứa script 
-- Kéo cái nút lên thanh bookmark, đổi tên lại cho dễ nhận biết
-- Đăng nhập vô Portal, vô phần Tra cứu kết quả học tập, chọn `--Tất cả--` ở phần `Năm học`
-- Ấn vô cái bookmark bạn vừa kéo là xong :3
+- Ấn [vô đây](https://ngntrgduc.github.io/HCMUS-GPA-bookmarklet) để chuyển hướng tới trang web hướng dẫn sử dụng
 
 ### Credit
-- [Source code tính GPA](https://github.com/ngntrgduc/HCMUS-GPA-bookmarlet/source.js) của một anh nào đó bên Khoa CNTT trường mình mà mình không biết tên :(( 
+- [Source code tính GPA](https://github.com/ngntrgduc/HCMUS-GPA-bookmarlet/source.js) của một anh nào đó bên Khoa CNTT trường mình mà mình không biết tên :((.
+Cách dùng là copy paste code vào khung console trên Portal. Mình thì thấy cách này khá là bất tiện nên cái bookmarklet này đã ra đời :>
 - [GPABookmarklet](https://github.com/dtrung98/GPABookmarklet): Chính cái repo này đã tạo cảm hứng để mình làm cái này (Mặc dù cái của mình nhìn không xịn bằng của anh ấy :v)
