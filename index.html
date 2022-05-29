@@ -10,7 +10,7 @@
 <body>
     <h1 align="center">HCMUS GPA bookmarklet</h1>
     
-    <p><b> &ensp; Hướng dẫn sử dụng</b></p>
+    <h3>&ensp; Hướng dẫn sử dụng</h3>
     
     <ul>
         <li><b>Bước 1:</b> Mở thanh bookmark trên trình duyệt của bạn lên bằng tổ hợp phím <b>Ctrl + Shift + B</b></li>
@@ -18,9 +18,9 @@
         <li><b>Bước 3:</b> Đăng nhập vô <a href="http://portal.hcmus.edu.vn/" target="_blank">Portal</a>, vào phần Tra cứu kết quả học tập, ở phần <b>Năm Học</b>, chọn <b>--Tất cả--</b> rồi nhấn <b>Xem Kết Quả Học Tập</b></li>
         <li><b>Bước 4:</b> Ấn vô cái bookmark bạn vừa tạo là xong :3</li>
     </ul>
-    
+
     <br> <br>
     
-    <a class="center script" href="javascript: (() => {     var tinchi = document.querySelectorAll('td:nth-child(3)');     var monhoc = document.querySelectorAll('td:nth-child(2)');     var diem = document.querySelectorAll('td:nth-child(6)');     var diemtren = 0, diemduoi = 0;     for (var i = 1; i < tinchi.length; i++) {         if (             monhoc[i].innerText.includes('Thể dục') ||             monhoc[i].innerText.includes('Anh văn') ||             monhoc[i].innerText.includes('Tin học cơ sở') ||             monhoc[i].innerText.includes('Giáo dục quốc phòng') ||             Number(diem[i].innerText) < 5         ) {             continue;         }         diemtren += Number(tinchi[i].innerText) * Number(diem[i].innerText);         diemduoi += Number(tinchi[i].innerText);     }      alert('Tổng số tín chỉ đã cày được : ' + diemduoi.toString()      + '\nĐiểm trung bình của bạn : ' + (diemtren / diemduoi).toFixed(2).toString()); })();">HCMUS-GPA-bookmarklet </a>            
+    <a class="script" href="javascript: (() => {     var tinchi = document.querySelectorAll('td:nth-child(3)');     var monhoc = document.querySelectorAll('td:nth-child(2)');     var diem = document.querySelectorAll('td:nth-child(6)');     var diemtren = 0, diemduoi = 0;     for (var i = 1; i < tinchi.length; i++) {         if (             monhoc[i].innerText.includes('Thể dục') ||             monhoc[i].innerText.includes('Anh văn') ||             monhoc[i].innerText.includes('Tin học cơ sở') ||             monhoc[i].innerText.includes('Giáo dục quốc phòng') ||             Number(diem[i].innerText) < 5         ) {             continue;         }         diemtren += Number(tinchi[i].innerText) * Number(diem[i].innerText);         diemduoi += Number(tinchi[i].innerText);     }      alert('Tổng số tín chỉ đã cày được : ' + diemduoi.toString()      + '\nĐiểm trung bình của bạn : ' + (diemtren / diemduoi).toFixed(2).toString()); })();">HCMUS-GPA-bookmarklet </a>            
 </body>
 </html>

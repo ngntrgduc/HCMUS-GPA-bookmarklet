@@ -10,12 +10,6 @@ ul {
     padding-left: 60px;
 }
 
-.center {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
-}
-
 .script {
     font-size: 35px;
     width: 450px;
@@ -24,6 +18,9 @@ ul {
     text-align: center;
     color: #00ffff;
     background-color: #ffe2f8;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
     transition-duration: 0.5s;
 }
 
