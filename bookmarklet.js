@@ -16,5 +16,5 @@ javascript: (() => {
         diemtren += Number(tinchi[i].innerText) * Number(diem[i].innerText);
         diemduoi += Number(tinchi[i].innerText);
     }
-    alert("Số tín chỉ đã cày được : " + diemduoi.toString() + "\nĐiểm trung bình của bạn : " + (diemtren / diemduoi).toFixed(2).toString());
+    alert("Tổng số tín chỉ đã cày được : " + diemduoi.toString() + "\nĐiểm trung bình của bạn : " + (diemtren / diemduoi).toFixed(2).toString());
 })();
