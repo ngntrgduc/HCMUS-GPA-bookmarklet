@@ -8,5 +8,5 @@ Tính GPA trên Portal thông qua bookmarklet
 - Ấn [vô đây](https://ngntrgduc.github.io/HCMUS-GPA-bookmarklet) để chuyển hướng tới trang web hướng dẫn sử dụng
 
 ### Credit
-- [Source code tính GPA](https://github.com/ngntrgduc/HCMUS-GPA-bookmarlet/blob/master/source.js) của một anh nào đó bên Khoa CNTT trường mình mà mình không biết tên :((. Cách dùng là copy paste code vào khung console trên Portal. Nhưng mình thấy cách này khá là bất tiện nên cái bookmarklet này đã ra đời :>
+- [Source code tính GPA](https://gist.github.com/shivaluma/e1f420be1d3cf8e6c6287539e8abcf89) của anh [Nguyễn Viết Thanh](https://github.com/shivaluma). Cách dùng là copy paste code vào khung console trên trang điểm của Portal. Nhưng mình thấy cách này khá là bất tiện nên cái bookmarklet này đã ra đời :>
 - [dtrung98/GPABookmarklet](https://github.com/dtrung98/GPABookmarklet) - Chính cái repo này đã tạo cảm hứng để mình làm cái bookmarklet này (Mặc dù cái của mình nhìn không xịn bằng của anh ấy :v)
