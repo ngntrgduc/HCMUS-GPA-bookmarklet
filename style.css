@@ -13,7 +13,7 @@ ul {
 .script {
     font-size: 35px;
     width: 450px;
-    padding:10px 40px;
+    padding:15px 35px;
     border-radius: 20px;
     text-align: center;
     color: #00ffff;
@@ -25,6 +25,6 @@ ul {
 }
 
 .script:hover {
-    font-size: 40px;
+    box-shadow: 0px 0px 4px 4px rgba(0, 255, 255);
     transition-duration: 0.5s;
 }
