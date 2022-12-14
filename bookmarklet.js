@@ -32,5 +32,5 @@ javascript: (() => {
     } else {
         xeploai = 'Kém';
     }
-    alert('- Tổng số tín chỉ đã cày được : ' + tongtinchi.toString() + '\n- Điểm trung bình của bạn : ' + (diemtrungbinh).toFixed(2).toString() + '\n- Xếp loại : ' + xeploai);
+    alert('- Điểm trung bình của bạn : ' + (diemtrungbinh).toFixed(2).toString() + '\n- Tổng số tín chỉ đã cày được : ' + tongtinchi.toString() + '\n- Xếp loại : ' + xeploai);
 })();
