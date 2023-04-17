@@ -32,5 +32,8 @@ javascript: (() => {
     } else {
         xeploai = 'Kém';
     }
-    alert('- Điểm trung bình của bạn : ' + (diemtrungbinh).toPrecision(5).toString() + '\n- Tổng số tín chỉ đã cày được : ' + tongtinchi.toString() + '\n- Xếp loại : ' + xeploai);
+    alert('- Điểm trung bình của bạn : ' + (diemtrungbinh).toPrecision(5).toString() + 
+        ' (' + ((diemtrungbinh).toPrecision(2) * 0.4).toString()  + '/4)' + 
+        '\n- Tổng số tín chỉ đã cày được : ' + tongtinchi.toString() + 
+        '\n- Xếp loại : ' + xeploai);
 })();
