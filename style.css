@@ -1,26 +1,45 @@
 html {
     font-size: 20px;
+    background-color: #eff1f5;
+    color: #4c4f69;
+    display: flex;
+    justify-content: center;
+    font-family:Arial, Helvetica, serif;
 }
 
-ul {
-    padding-left: 60px;
+b {
+    color: #1e66f5;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    padding-bottom: 5px;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 550px;
+    /* row-gap: 10px; */
 }
 
 .script {
-    font-size: 35px;
-    width: 450px;
+    font-size: 25px;
+    width: 400px;
     padding:15px 35px;
-    border-radius: 20px;
+    border-radius: 10px;
     text-align: center;
-    color: #00ffff;
-    background-color: #ffe2f8;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
+    color: #ea76cb;
+    background-color: #ea76cb;
+    border-style: solid;
     transition-duration: 0.5s;
 }
 
 .script:hover {
-    box-shadow: 0px 0px 4px 4px rgba(0, 255, 255);
-    transition-duration: 0.5s;
+    background-color: #eff1f5;
 }
