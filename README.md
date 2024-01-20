@@ -1,6 +1,3 @@
-# Warning
-Code của mình hiện đang bị lỗi tính cả điểm cũ của môn đã cải thiện. Sau khi thi xong mình sẽ fix :(
-
 # HCMUS-GPA-bookmarlet
 Tính GPA trên Portal thông qua bookmarklet.
 
