@@ -8,6 +8,8 @@ javascript: (() => {
     var totalCredits = 0;
     var totalCourses = 0;
     var fourPointScale = 0;
+    var courseName = '';
+    var data = {};
     
     function getFourPointScale(grade) {
         if (grade >= 9) return 4;
@@ -22,21 +24,27 @@ javascript: (() => {
 
     for (var i = 1; i < credits.length; i++) {
         grade = Number(grades[i].innerText);
-
+        courseName = courses[i].innerText;
         if (
-            courses[i].innerText.includes('Thể dục') ||
-            courses[i].innerText.includes('Anh văn') ||
-            courses[i].innerText.includes('Tin học cơ sở') ||
-            courses[i].innerText.includes('Giáo dục quốc phòng') ||
+            courseName.includes('Thể dục') ||
+            courseName.includes('Anh văn') ||
+            courseName.includes('Tin học cơ sở') ||
+            courseName.includes('Giáo dục quốc phòng') ||
             !grade || grade < 5
         ) { continue; }
-
+        
         credit = Number(credits[i].innerText);
+        data[courseName] = [credit, grade];
+    }
+
+    Object.keys(data).forEach((course) => {
+        credit = data[course][0];
+        grade = data[course][1];
         totalGrades += credit * grade;
         totalCredits += credit;
         totalCourses += 1;
         fourPointScale += getFourPointScale(grade);
-    }
+    });
 
     var type = '';
     var average = totalGrades / totalCredits;
@@ -46,11 +54,11 @@ javascript: (() => {
     else if (average >= 5 && average < 7) { type = 'Trung bình'; }
     else if (average >= 4 && average < 5) { type = 'Yếu';        }
     else                                  { type = 'Kém';        }
-
+    
     alert(
-        '- Điểm trung bình của bạn : ' + (average).toPrecision(5).toString() + 
-        ' (' + ((fourPointScale/totalCourses).toPrecision(2)).toString() + '/4)' + '\n' + 
-        '- Tổng số tín chỉ đã cày được : ' + totalCredits.toString() + '\n' + 
+        '- Điểm trung bình của bạn : ' + (average).toPrecision(5) + 
+        ' (' + ((fourPointScale/totalCourses).toPrecision(2)) + '/4)' + '\n' + 
+        '- Tổng số tín chỉ đã cày được : ' + totalCredits + '\n' + 
         '- Xếp loại : ' + type
     );
 })();
