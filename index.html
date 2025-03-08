@@ -9,19 +9,6 @@
 </head>
 <body>
     <div class="main">
-        <h3 align="center">HCMUS GPA bookmarklet</h3>
-        <ul>
-            <li><b>Bước 1:</b> Mở thanh bookmark trên trình duyệt của bạn bằng tổ hợp phím <b>Ctrl + Shift + B</b></li>
-            <li><b>Bước 2:</b> Kéo cái thanh hồng hồng xinh xinh lên thanh bookmark mà bạn vừa mở</li>
-            <li><b>Bước 3:</b> Đăng nhập vô <a href="http://portal.hcmus.edu.vn/" target="_blank">Portal</a>:
-                <ul>
-                    <li>Vào phần <b>Tra cứu kết quả học tập</b></li>
-                    <li>Ở phần <b>Năm Học</b>, chọn <b>--Tất cả--</b></li>
-                    <li>Nhấn <b>Xem Kết Quả Học Tập</b></li>
-                </ul>
-            <li><b>Bước 4:</b> Ấn vô cái bookmark bạn vừa tạo là xong :></li>
-        </ul>
-
         <a style="text-decoration: none" class="script" href="javascript: (() => {
             var credits = document.querySelectorAll('td:nth-child(3)');
             var courses = document.querySelectorAll('td:nth-child(2)');
@@ -37,13 +24,8 @@
             
             function getFourPointScale(grade) {
                 if (grade >= 9) return 4;
-                if (grade < 3)  return 0;
-        
-                if (Number.isInteger(grade))
-                    return (Number(grade)-1)/2;
-        
-                grade = grade.toString().split('.');
-                return (Number(grade[0])-1)/2 + Number(grade[1])*0.05;
+                if (grade < 3) return 0;
+                return 1 + (Number(grade)-3)/2;
             }
         
             for (var i = 1; i < credits.length; i++) {
@@ -88,6 +70,19 @@
         })();
         
         ">HCMUS-GPA-bookmarklet</a>
+
+        <ul>
+            <li><b>Bước 1:</b> Mở thanh bookmark trên trình duyệt của bạn bằng tổ hợp phím <b>Ctrl + Shift + B</b></li>
+            <li><b>Bước 2:</b> Kéo cái thanh hồng hồng xinh xinh ở trên lên thanh bookmark mà bạn vừa mở</li>
+            <li><b>Bước 3:</b> Đăng nhập vô <a href="http://portal.hcmus.edu.vn/" target="_blank">Portal</a>:
+                <ul>
+                    <li>Vào phần <b>Tra cứu kết quả học tập</b></li>
+                    <li>Ở phần <b>Năm Học</b>, chọn <b>--Tất cả--</b></li>
+                    <li>Nhấn <b>Xem Kết Quả Học Tập</b></li>
+                </ul>
+            <li><b>Bước 4:</b> Ấn vô cái bookmark bạn vừa tạo là xong :></li>
+        </ul>
+        
     </div>
 </body>
 </html>

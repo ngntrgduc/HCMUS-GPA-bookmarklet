@@ -13,13 +13,8 @@ javascript: (() => {
     
     function getFourPointScale(grade) {
         if (grade >= 9) return 4;
-        if (grade < 3)  return 0;
-
-        if (Number.isInteger(grade))
-            return (Number(grade)-1)/2;
-
-        grade = grade.toString().split('.');
-        return (Number(grade[0])-1)/2 + Number(grade[1])*0.05;
+        if (grade < 3) return 0;
+        return 1 + (Number(grade)-3)/2;
     }
 
     for (var i = 1; i < credits.length; i++) {
