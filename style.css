@@ -5,6 +5,7 @@ html {
     display: flex;
     justify-content: center;
     font-family:Arial, Helvetica, serif;
+    margin-top: 1.5em;
 }
 
 b {
@@ -35,11 +36,14 @@ li {
     border-radius: 10px;
     text-align: center;
     color: #ea76cb;
+    
+    color: #4c4f69;
     background-color: #ea76cb;
-    border-style: solid;
-    transition-duration: 0.5s;
+    /* border-style: solid; */
+    transition-duration: 0.3s;
 }
 
 .script:hover {
-    background-color: #eff1f5;
+    /* background-color: #ea76cb; */
+    width: 450px;
 }
