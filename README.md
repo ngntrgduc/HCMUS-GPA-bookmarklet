@@ -3,9 +3,16 @@ Tính GPA trên Portal thông qua bookmarklet.
 
 Ấn [**vô đây**](https://ngntrgduc.github.io/HCMUS-GPA-bookmarklet) để chuyển hướng tới trang web hướng dẫn sử dụng.
 
-### Cách tính GPA (Không tính học phần Giáo dục quốc phòng, Thể dục, Anh văn, Tin học cơ sở và những môn rớt)
+### Cách tính GPA 
+Không tính học phần Giáo dục quốc phòng, Thể dục, Anh văn, Tin học cơ sở và những môn rớt
+
 ![image](https://user-images.githubusercontent.com/47920109/170811023-856c84e6-80e2-43fe-90f7-a1f62a8d9629.png)
 > Sổ tay sinh viên năm học 2021-2022
+
+### Quy đổi điểm sang thang điểm 4
+![image](https://github.com/user-attachments/assets/8e21b6a8-f7f6-46ed-ad76-59a2695665e5)
+> https://www.ctda.hcmus.edu.vn/vi/2024/06/thong-bao-quy-doi-thang-diem-4/
+
 
 ### Credit
 - [Source code tính GPA](https://gist.github.com/shivaluma/e1f420be1d3cf8e6c6287539e8abcf89) 
