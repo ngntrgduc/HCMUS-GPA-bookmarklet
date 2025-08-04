@@ -10,27 +10,25 @@
 <body>
     <div class="main">
         <a style="text-decoration: none" class="script" href="javascript: (() => {
-            var credits = document.querySelectorAll('td:nth-child(3)');
-            var courses = document.querySelectorAll('td:nth-child(2)');
-            var grades = document.querySelectorAll('td:nth-child(6)');
-            var grade = 0;
-            var credit = 0;
-            var totalGrades = 0;
-            var totalCredits = 0;
-            var totalCourses = 0;
-            var fourPointScale = 0;
-            var courseName = '';
-            var data = {};
+            const credits = document.querySelectorAll('td:nth-child(3)');
+            const courses = document.querySelectorAll('td:nth-child(2)');
+            const grades = document.querySelectorAll('td:nth-child(6)');
+        
+            let totalGrades = 0;
+            let totalCredits = 0;
+            let totalCourses = 0;
+            let totalFourScaleGrades = 0;
+            const courseData = {};
             
-            function getFourPointScale(grade) {
+            function getFourScaleGrade(grade) {
                 if (grade >= 9) return 4;
                 if (grade < 3) return 0;
-                return 1 + (Number(grade)-3)/2;
+                return 1 + (grade - 3)/2;
             }
         
-            for (var i = 1; i < credits.length; i++) {
-                grade = Number(grades[i].innerText);
-                courseName = courses[i].innerText;
+            for (let i = 1; i < credits.length; i++) {
+                const grade = Number(grades[i].innerText);
+                const courseName = courses[i].innerText;
                 if (
                     courseName.includes('Thể dục') ||
                     courseName.includes('Anh văn') ||
@@ -39,36 +37,34 @@
                     !grade || grade < 5
                 ) { continue; }
                 
-                credit = Number(credits[i].innerText);
-                data[courseName] = [credit, grade];
+                const credit = Number(credits[i].innerText);
+                courseData[courseName] = [credit, grade];
             }
         
-            Object.keys(data).forEach((course) => {
-                credit = data[course][0];
-                grade = data[course][1];
+            Object.values(courseData).forEach(([credit, grade]) => {
                 totalGrades += credit * grade;
+                totalFourScaleGrades += credit * getFourScaleGrade(grade);
                 totalCredits += credit;
                 totalCourses += 1;
-                fourPointScale += getFourPointScale(grade);
             });
         
-            var type = '';
-            var average = totalGrades / totalCredits;
-            if      (average >= 9)                { type = 'Xuất xắc';   }
-            else if (average >= 8 && average < 9) { type = 'Giỏi';       }
-            else if (average >= 7 && average < 8) { type = 'Khá';        }
-            else if (average >= 5 && average < 7) { type = 'Trung bình'; }
-            else if (average >= 4 && average < 5) { type = 'Yếu';        }
-            else                                  { type = 'Kém';        }
+            const GPA = totalGrades / totalCredits;
+            const fourScaleGPA = totalFourScaleGrades / totalCredits;
+            let type = '';
+            if      (GPA >= 9)            { type = 'Xuất xắc';   }
+            else if (GPA >= 8 && GPA < 9) { type = 'Giỏi';       }
+            else if (GPA >= 7 && GPA < 8) { type = 'Khá';        }
+            else if (GPA >= 5 && GPA < 7) { type = 'Trung bình'; }
+            else if (GPA >= 4 && GPA < 5) { type = 'Yếu';        }
+            else                          { type = 'Kém';        }
             
             alert(
-                '- Điểm trung bình của bạn : ' + (average).toPrecision(5) + 
-                ' (' + ((fourPointScale/totalCourses).toPrecision(2)) + '/4)' + '\n' + 
+                '- Điểm trung bình của bạn : ' + (GPA).toFixed(2) + 
+                ' (' + ((fourScaleGPA).toFixed(2)) + '/4)' + '\n' + 
                 '- Tổng số tín chỉ đã cày được : ' + totalCredits + '\n' + 
                 '- Xếp loại : ' + type
             );
         })();
-        
         ">HCMUS-GPA-bookmarklet</a>
 
         <ul>
